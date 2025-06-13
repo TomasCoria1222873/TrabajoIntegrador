@@ -1,0 +1,54 @@
+{
+  "name": "centro-cultural-jovenes",
+  "version": "1.0.0",
+  "description": "Sitio web para Centro Cultural para Jóvenes - Proyecto educativo",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000 -o",
+    "dev": "live-server --port=8000 --open=/index.html",
+    "test": "echo \"No hay tests configurados\" && exit 0"
+  },
+  "keywords": [
+    "centro-cultural",
+    "jovenes",
+    "educacion",
+    "arte",
+    "cultura",
+    "html5",
+    "css3",
+    "javascript",
+    "tailwindcss",
+    "responsive",
+    "accesibilidad"
+  ],
+  "author": "Grupo de Desarrollo Web",
+  "contributors": [
+    "María González",
+    "Carlos Rodríguez", 
+    "Ana Martínez",
+    "Luis Pérez",
+    "Sofia García"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/centro-cultural-jovenes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/centro-cultural-jovenes/issues"
+  },
+  "homepage": "https://github.com/username/centro-cultural-jovenes#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

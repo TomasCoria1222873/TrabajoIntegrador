@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Cultural para Jóvenes - Sobre Nosotros</title>
+    <meta name="description" content="Conoce la historia, misión y valores del Club Cultural para Jóvenes">
+    <meta name="keywords" content="sobre nosotros, historia, misión, valores, club cultural">
+    
+    <!-- TailwindCSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de TailwindCSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#ffffff',
+                        accent: '#666666'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Poppins', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light font-sans text-dark">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">CC</span>
+                    </div>
+                    <h1 class="text-2xl font-display font-bold text-primary">Club Cultural</h1>
+                </div>
+                
+                <!-- Navegación -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="relative text-gray-700 hover:text-primary font-medium">Inicio</a>
+                    <a href="actividades.html" class="relative text-gray-700 hover:text-primary font-medium">Actividades</a>
+                    <a href="cronograma.html" class="relative text-gray-700 hover:text-primary font-medium">Cronograma</a>
+                    <a href="contacto.html" class="relative text-gray-700 hover:text-primary font-medium">Contacto</a>
+                    <a href="sobre-nosotros.html" class="relative text-gray-700 hover:text-primary font-medium active:text-primary after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded">Sobre Nosotros</a>
+                </nav>
+                
+                <!-- Menú móvil -->
+                <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menú móvil desplegable -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Inicio</a>
+                    <a href="actividades.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Actividades</a>
+                    <a href="cronograma.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Cronograma</a>
+                    <a href="contacto.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Contacto</a>
+                    <a href="sobre-nosotros.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg active:bg-primary active:text-white">Sobre Nosotros</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" class="min-h-screen">
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-display font-bold text-center mb-12">Sobre Nosotros</h2>
+                
+                <!-- Historia -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-6">Nuestra Historia</h3>
+                        <p class="text-gray-600 mb-4">
+                            El Club Cultural para Jóvenes nació en 2018 con la visión de crear un espacio inclusivo donde los jóvenes pudieran desarrollar su creatividad y encontrar su voz a través del arte y la cultura.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            Desde nuestros inicios, hemos trabajado incansablemente para ofrecer programas de calidad que fomenten el desarrollo personal, la expresión artística y la construcción de comunidad entre jóvenes de diferentes orígenes.
+                        </p>
+                        <p class="text-gray-600">
+                            Hoy, somos un referente en la ciudad, habiendo impactado positivamente en la vida de más de 5,000 jóvenes a través de nuestros talleres, eventos y actividades culturales.
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-r from-primary to-accent h-96 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-xl font-semibold">Imagen de Nuestra Historia</span>
+                    </div>
+                </div>
+                
+                <!-- Misión y Visión -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-4">Nuestra Misión</h4>
+                        <p class="text-gray-600">
+                            Empoderar a los jóvenes a través del arte y la cultura, proporcionando un espacio seguro donde puedan desarrollar sus talentos, expresar su creatividad y construir conexiones significativas con otros.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-4">Nuestra Visión</h4>
+                        <p class="text-gray-600">
+                            Ser el centro cultural líder en la región, reconocido por nuestra innovación, inclusividad y compromiso con el desarrollo integral de los jóvenes, contribuyendo a una sociedad más creativa y conectada.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Valores -->
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl font-semibold mb-8">Nuestros Valores</h3>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">I</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Inclusión</h4>
+                            <p class="text-gray-600 text-sm">Todos son bienvenidos sin importar su origen o experiencia.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">C</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Creatividad</h4>
+                            <p class="text-gray-600 text-sm">Fomentamos la expresión artística y la innovación.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">R</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Respeto</h4>
+                            <p class="text-gray-600 text-sm">Valoramos la diversidad y promovemos el respeto mutuo.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold">E</span>
+                            </div>
+                            <h4 class="font-semibold mb-2">Excelencia</h4>
+                            <p class="text-gray-600 text-sm">Buscamos la calidad en todo lo que hacemos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2025 Tomas Coria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 
