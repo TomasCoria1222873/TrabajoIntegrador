@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club Cultural para Jóvenes - Contacto</title>
-    <meta name="description" content="Contacta con el Club Cultural para Jóvenes - Información, horarios y formulario de contacto">
-    <meta name="keywords" content="contacto, información, horarios, club cultural, jóvenes">
-    
-    <!-- TailwindCSS vía CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuración de TailwindCSS -->
     <script>
         tailwind.config = {
             theme: {
@@ -19,70 +13,53 @@
                         primary: '#000000',
                         secondary: '#ffffff',
                         accent: '#666666'
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['Poppins', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light font-sans text-dark">
-    <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-xl">CC</span>
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold">CC</span>
                     </div>
-                    <h1 class="text-2xl font-display font-bold text-primary">Club Cultural</h1>
+                    <h1 class="text-xl font-bold text-gray-800">Club Cultural</h1>
                 </div>
-                
-                <!-- Navegación -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="relative text-gray-700 hover:text-primary font-medium">Inicio</a>
-                    <a href="actividades.html" class="relative text-gray-700 hover:text-primary font-medium">Actividades</a>
-                    <a href="cronograma.html" class="relative text-gray-700 hover:text-primary font-medium">Cronograma</a>
-                    <a href="contacto.html" class="relative text-gray-700 hover:text-primary font-medium active:text-primary after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded">Contacto</a>
-                    <a href="sobre-nosotros.html" class="relative text-gray-700 hover:text-primary font-medium">Sobre Nosotros</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-primary">Inicio</a>
+                    <a href="actividades.html" class="text-gray-600 hover:text-primary">Actividades</a>
+                    <a href="cronograma.html" class="text-gray-600 hover:text-primary">Cronograma</a>
+                    <a href="entradas.html" class="text-gray-600 hover:text-primary">Entradas</a>
+                    <a href="contacto.html" class="text-primary font-medium">Contacto</a>
+                    <a href="sobre-nosotros.html" class="text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </nav>
-                
-                <!-- Menú móvil -->
-                <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                <button id="menu-toggle" class="md:hidden p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            
-            <!-- Menú móvil desplegable -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="index.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Inicio</a>
-                    <a href="actividades.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Actividades</a>
-                    <a href="cronograma.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Cronograma</a>
-                    <a href="contacto.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg active:bg-primary active:text-white">Contacto</a>
-                    <a href="sobre-nosotros.html" class="block px-4 py-3 text-gray-700 hover:bg-primary hover:text-white font-medium rounded-lg">Sobre Nosotros</a>
+                    <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-primary">Inicio</a>
+                    <a href="actividades.html" class="px-4 py-2 text-gray-600 hover:text-primary">Actividades</a>
+                    <a href="cronograma.html" class="px-4 py-2 text-gray-600 hover:text-primary">Cronograma</a>
+                    <a href="entradas.html" class="px-4 py-2 text-gray-600 hover:text-primary">Entradas</a>
+                    <a href="contacto.html" class="px-4 py-2 text-primary font-medium">Contacto</a>
+                    <a href="sobre-nosotros.html" class="px-4 py-2 text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Contenido principal -->
     <main id="main-content" class="min-h-screen">
         <div class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-display font-bold text-center mb-12">Contáctanos</h2>
-                
                 <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Información de contacto -->
                     <div>
                         <h3 class="text-2xl font-semibold mb-6">Información de Contacto</h3>
                         <div class="space-y-4">
@@ -98,7 +75,6 @@
                                     <p class="text-gray-600">Piaggio N° 653, Lomas de Zamora</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-center space-x-4">
                                 <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +86,6 @@
                                     <p class="text-gray-600">+54 11 1234-5678</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-center space-x-4">
                                 <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,8 +98,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Horarios -->
                         <div class="mt-8">
                             <h4 class="text-xl font-semibold mb-4">Horarios de Atención</h4>
                             <div class="space-y-2">
@@ -134,9 +107,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Ubicación</h4>
+                            <div class="w-full max-w-2xl h-64 rounded-lg overflow-hidden mx-auto">
+                                <iframe
+                                    src="https://www.google.com/maps?q=Piaggio+653,+Lomas+de+Zamora,+Argentina&output=embed"
+                                    width="100%"
+                                    height="100%"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Formulario de contacto -->
                     <div>
                         <h3 class="text-2xl font-semibold mb-6">Envíanos un Mensaje</h3>
                         <form id="contact-form" class="space-y-6">
@@ -152,19 +137,16 @@
                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                                 </div>
                             </div>
-                            
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
                                 <input type="email" id="email" name="email" required 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                             </div>
-                            
                             <div>
                                 <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
                                 <input type="tel" id="telefono" name="telefono" 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                             </div>
-                            
                             <div>
                                 <label for="asunto" class="block text-sm font-medium text-gray-700 mb-2">Asunto *</label>
                                 <select id="asunto" name="asunto" required 
@@ -177,28 +159,19 @@
                                     <option value="otro">Otro</option>
                                 </select>
                             </div>
-                            
                             <div>
                                 <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
                                 <textarea id="mensaje" name="mensaje" rows="5" required 
                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
                             </div>
-                            
-                            <button type="submit" 
-                                    class="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                                Enviar Mensaje
-                            </button>
+                            <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Enviar Mensaje</button>
                         </form>
-                        
-                        <!-- Mensaje de éxito/error -->
                         <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center">
@@ -206,8 +179,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html> 

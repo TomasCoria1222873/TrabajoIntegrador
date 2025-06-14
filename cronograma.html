@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronograma - Club Cultural</title>
-    
-    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,64 +20,52 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold">CC</span>
                     </div>
                     <h1 class="text-xl font-bold text-gray-800">Club Cultural</h1>
                 </div>
-                
-                <!-- Navegación -->
                 <nav class="hidden md:flex space-x-6">
                     <a href="index.html" class="text-gray-600 hover:text-primary">Inicio</a>
                     <a href="actividades.html" class="text-gray-600 hover:text-primary">Actividades</a>
                     <a href="cronograma.html" class="text-primary font-medium">Cronograma</a>
+                    <a href="entradas.html" class="text-gray-600 hover:text-primary">Entradas</a>
                     <a href="contacto.html" class="text-gray-600 hover:text-primary">Contacto</a>
-                    <a href="sobre-nosotros.html" class="text-gray-600 hover:text-primary">Sobre Nosotros</a>
+                    <a href="sobre-nosotros.html" class="text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </nav>
-                
-                <!-- Menú móvil -->
                 <button id="menu-toggle" class="md:hidden p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            
-            <!-- Menú móvil -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-primary">Inicio</a>
                     <a href="actividades.html" class="px-4 py-2 text-gray-600 hover:text-primary">Actividades</a>
                     <a href="cronograma.html" class="px-4 py-2 text-primary font-medium">Cronograma</a>
+                    <a href="entradas.html" class="px-4 py-2 text-gray-600 hover:text-primary">Entradas</a>
                     <a href="contacto.html" class="px-4 py-2 text-gray-600 hover:text-primary">Contacto</a>
-                    <a href="sobre-nosotros.html" class="px-4 py-2 text-gray-600 hover:text-primary">Sobre Nosotros</a>
+                    <a href="sobre-nosotros.html" class="px-4 py-2 text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Contenido principal -->
     <main class="min-h-screen">
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-4">Cronograma de Eventos</h2>
                 <p class="text-center text-gray-600 mb-12">Próximas 4 semanas de actividades</p>
-                
-                <!-- Filtros por semana -->
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
                     <button class="filter-btn active px-6 py-2 bg-primary text-white rounded-full font-medium" data-week="semana1">Semana 1</button>
                     <button class="filter-btn px-6 py-2 bg-white border-2 border-primary text-primary rounded-full font-medium" data-week="semana2">Semana 2</button>
                     <button class="filter-btn px-6 py-2 bg-white border-2 border-primary text-primary rounded-full font-medium" data-week="semana3">Semana 3</button>
                     <button class="filter-btn px-6 py-2 bg-white border-2 border-primary text-primary rounded-full font-medium" data-week="semana4">Semana 4</button>
                 </div>
-
-                <!-- Cronograma por semanas -->
                 <div class="space-y-8">
                     <!-- Semana 1 -->
                     <div class="week-section" data-week="semana1">
@@ -93,12 +79,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Inauguración Taller de Música</h4>
                                 <p class="mb-4 opacity-90">Apertura del taller de guitarra y piano para principiantes.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Sala de Música</span>
-                                    <button class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Inscribirse
-                                    </button>
+                                    <span class="text-lg font-bold">Gratis</span>
                                 </div>
+                                <button class="w-full bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Asistir
+                                </button>
                             </div>
 
                             <!-- Evento 2 -->
@@ -109,12 +96,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Exposición de Arte Digital</h4>
                                 <p class="mb-4 opacity-90">Muestra de trabajos realizados en el taller de arte digital.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Galería Principal</span>
-                                    <button class="bg-white text-accent px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Ver Más
-                                    </button>
+                                    <span class="text-lg font-bold">$500</span>
                                 </div>
+                                <button class="w-full bg-white text-accent px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 3 -->
@@ -125,12 +113,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Noche de Poesía</h4>
                                 <p class="mb-4 opacity-90">Recital de poesía con jóvenes poetas del centro cultural.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Auditorio</span>
-                                    <button class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Asistir
-                                    </button>
+                                    <span class="text-lg font-bold">$300</span>
                                 </div>
+                                <button class="w-full bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -145,14 +134,15 @@
                                     <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Martes 23</span>
                                     <span class="text-sm">17:00 - 19:00</span>
                                 </div>
-                                <h4 class="text-xl font-semibold mb-2">Taller de Danza Contemporánea</h4>
+                                <h4 class="text-xl font-semibold mb-2">Clase Abierta de Danza</h4>
                                 <p class="mb-4 opacity-90">Clase especial de danza contemporánea para jóvenes.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Sala de Danza</span>
-                                    <button class="bg-white text-gray-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Inscribirse
-                                    </button>
+                                    <span class="text-lg font-bold">$400</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 2 -->
@@ -163,12 +153,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Cine Debate</h4>
                                 <p class="mb-4 opacity-90">Proyección de película independiente con debate posterior.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Sala de Cine</span>
-                                    <button class="bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Reservar
-                                    </button>
+                                    <span class="text-lg font-bold">$200</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 3 -->
@@ -179,12 +170,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Festival de Arte Urbano</h4>
                                 <p class="mb-4 opacity-90">Festival de graffiti y arte urbano en el patio del centro.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Patio Central</span>
-                                    <button class="bg-white text-gray-500 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Participar
-                                    </button>
+                                    <span class="text-lg font-bold">Gratis</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-500 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Asistir
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -199,14 +191,15 @@
                                     <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Lunes 29</span>
                                     <span class="text-sm">18:30 - 20:30</span>
                                 </div>
-                                <h4 class="text-xl font-semibold mb-2">Taller de Teatro</h4>
-                                <p class="mb-4 opacity-90">Inicio del taller de teatro para jóvenes actores.</p>
-                                <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-semibold mb-2">Clase de Teatro</h4>
+                                <p class="mb-4 opacity-90">Clase especial de teatro para jóvenes actores.</p>
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Teatro</span>
-                                    <button class="bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Inscribirse
-                                    </button>
+                                    <span class="text-lg font-bold">$600</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 2 -->
@@ -217,12 +210,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Club de Lectura</h4>
                                 <p class="mb-4 opacity-90">Discusión del libro "El Principito" en el club de lectura.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Biblioteca</span>
-                                    <button class="bg-white text-gray-400 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Unirse
-                                    </button>
+                                    <span class="text-lg font-bold">Gratis</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-400 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Asistir
+                                </button>
                             </div>
 
                             <!-- Evento 3 -->
@@ -233,12 +227,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Concierto Acústico</h4>
                                 <p class="mb-4 opacity-90">Noche de música acústica con jóvenes talentos.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Auditorio</span>
-                                    <button class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Comprar Entrada
-                                    </button>
+                                    <span class="text-lg font-bold">$800</span>
                                 </div>
+                                <button class="w-full bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -253,14 +248,15 @@
                                     <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Martes 6</span>
                                     <span class="text-sm">17:00 - 19:00</span>
                                 </div>
-                                <h4 class="text-xl font-semibold mb-2">Taller de Fotografía</h4>
+                                <h4 class="text-xl font-semibold mb-2">Workshop de Fotografía</h4>
                                 <p class="mb-4 opacity-90">Aprende técnicas básicas de fotografía digital.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Sala Multimedia</span>
-                                    <button class="bg-white text-gray-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Inscribirse
-                                    </button>
+                                    <span class="text-lg font-bold">$700</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 2 -->
@@ -269,14 +265,15 @@
                                     <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Jueves 8</span>
                                     <span class="text-sm">14:00 - 16:00</span>
                                 </div>
-                                <h4 class="text-xl font-semibold mb-2">Taller de Escritura Creativa</h4>
+                                <h4 class="text-xl font-semibold mb-2">Taller de Escritura</h4>
                                 <p class="mb-4 opacity-90">Desarrolla tu creatividad a través de la escritura.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Sala de Talleres</span>
-                                    <button class="bg-white text-gray-500 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Inscribirse
-                                    </button>
+                                    <span class="text-lg font-bold">$450</span>
                                 </div>
+                                <button class="w-full bg-white text-gray-500 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Comprar Tickets
+                                </button>
                             </div>
 
                             <!-- Evento 3 -->
@@ -287,12 +284,13 @@
                                 </div>
                                 <h4 class="text-xl font-semibold mb-2">Feria de Arte Joven</h4>
                                 <p class="mb-4 opacity-90">Exposición y venta de obras de jóvenes artistas.</p>
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mb-4">
                                     <span class="text-sm">Todas las Salas</span>
-                                    <button class="bg-white text-accent px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
-                                        Visitar
-                                    </button>
+                                    <span class="text-lg font-bold">Gratis</span>
                                 </div>
+                                <button class="w-full bg-white text-accent px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100">
+                                    Asistir
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -300,8 +298,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center">
@@ -309,7 +305,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html> 

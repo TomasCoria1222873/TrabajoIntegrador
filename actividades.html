@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades - Club Cultural</title>
-    
-    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,56 +20,46 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold">CC</span>
                     </div>
                     <h1 class="text-xl font-bold text-gray-800">Club Cultural</h1>
                 </div>
-                
-                <!-- Navegación -->
                 <nav class="hidden md:flex space-x-6">
                     <a href="index.html" class="text-gray-600 hover:text-primary">Inicio</a>
                     <a href="actividades.html" class="text-primary font-medium">Actividades</a>
                     <a href="cronograma.html" class="text-gray-600 hover:text-primary">Cronograma</a>
+                    <a href="entradas.html" class="text-gray-600 hover:text-primary">Entradas</a>
                     <a href="contacto.html" class="text-gray-600 hover:text-primary">Contacto</a>
-                    <a href="sobre-nosotros.html" class="text-gray-600 hover:text-primary">Sobre Nosotros</a>
+                    <a href="sobre-nosotros.html" class="text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </nav>
-                
-                <!-- Menú móvil -->
                 <button id="menu-toggle" class="md:hidden p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-            
-            <!-- Menú móvil -->
             <div id="mobile-menu" class="md:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
                     <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-primary">Inicio</a>
                     <a href="actividades.html" class="px-4 py-2 text-primary font-medium">Actividades</a>
                     <a href="cronograma.html" class="px-4 py-2 text-gray-600 hover:text-primary">Cronograma</a>
+                    <a href="entradas.html" class="px-4 py-2 text-gray-600 hover:text-primary">Entradas</a>
                     <a href="contacto.html" class="px-4 py-2 text-gray-600 hover:text-primary">Contacto</a>
-                    <a href="sobre-nosotros.html" class="px-4 py-2 text-gray-600 hover:text-primary">Sobre Nosotros</a>
+                    <a href="sobre-nosotros.html" class="px-4 py-2 text-gray-600 hover:text-primary">Nuestra Historia</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Contenido principal -->
     <main class="min-h-screen">
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center mb-12">Nuestras Actividades</h2>
-                
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Actividad 1 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/musica.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -79,14 +67,10 @@
                             <p class="text-gray-600 mb-4 flex-grow">Aprende a tocar instrumentos y componer música.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Lunes y Miércoles</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Actividad 2 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/artedigital.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -94,14 +78,10 @@
                             <p class="text-gray-600 mb-4 flex-grow">Explora el diseño digital y la fotografía.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Martes y Jueves</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Actividad 3 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/teatro.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -109,14 +89,10 @@
                             <p class="text-gray-600 mb-4 flex-grow">Desarrolla habilidades de actuación y expresión.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Viernes y Sábados</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Actividad 4 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/danza.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -124,14 +100,10 @@
                             <p class="text-gray-600 mb-4 flex-grow">Explora diferentes estilos de danza.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Lunes y Viernes</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Actividad 5 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/literatura.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -139,14 +111,10 @@
                             <p class="text-gray-600 mb-4 flex-grow">Desarrolla tu voz literaria.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Miércoles y Sábados</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Actividad 6 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <div class="h-48 bg-cover bg-center" style="background-image: url('assets/cine.jpg')"></div>
                         <div class="p-6 flex flex-col flex-grow">
@@ -154,9 +122,7 @@
                             <p class="text-gray-600 mb-4 flex-grow">Aprende técnicas de filmación y edición.</p>
                             <div class="flex justify-between items-center mt-auto">
                                 <span class="text-sm text-gray-500">Jueves y Domingos</span>
-                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-                                    Inscribirse
-                                </button>
+                                <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-gray-800">Inscribirse</button>
                             </div>
                         </div>
                     </div>
@@ -164,8 +130,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center">
@@ -173,7 +137,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html> 

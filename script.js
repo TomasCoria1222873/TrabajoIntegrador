@@ -14,12 +14,17 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Página cargada correctamente');
-
-    // Iniciar cada funcionalidad
     initMobileMenu();
     initContactForm();
     initScheduleFilters();
+    // Redirección a entradas desde cronograma
+    document.querySelectorAll('button').forEach(button => {
+        if (button.textContent.includes('Comprar Tickets')) {
+            button.addEventListener('click', function() {
+                window.location.href = 'entradas.html';
+            });
+        }
+    });
 });
 
 // ========================================
@@ -42,39 +47,32 @@ function initContactForm() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            
-            if (validateForm()) {
-                showMessage('¡Mensaje enviado correctamente!', 'success');
+            if (validateForm(contactForm)) {
+                showMessage(formMessage, '¡Mensaje enviado correctamente!', 'success');
                 contactForm.reset();
-                clearValidation();
+                clearValidation(contactForm);
             } else {
-                showMessage('Por favor corrige los errores.', 'error');
+                showMessage(formMessage, 'Por favor corrige los errores.', 'error');
             }
         });
     }
 }
 
-function validateForm() {
-    const inputs = contactForm.querySelectorAll('input, textarea, select');
+function validateForm(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
     let isValid = true;
-    
     inputs.forEach(function(input) {
         if (input.hasAttribute('required') && !input.value.trim()) {
             markAsError(input);
             isValid = false;
         } else if (input.type === 'email' && input.value) {
-            if (!isValidEmail(input.value)) {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
                 markAsError(input);
                 isValid = false;
             }
         }
     });
-    
     return isValid;
-}
-
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function markAsError(input) {
@@ -82,26 +80,23 @@ function markAsError(input) {
     input.classList.remove('border-green-500');
 }
 
-function clearValidation() {
-    const inputs = contactForm.querySelectorAll('input, textarea, select');
+function clearValidation(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
     inputs.forEach(function(input) {
         input.classList.remove('border-red-500', 'border-green-500');
     });
 }
 
-function showMessage(message, type) {
+function showMessage(formMessage, message, type) {
     if (formMessage) {
         formMessage.textContent = message;
         formMessage.className = 'mt-4 p-4 rounded-lg';
-        
         if (type === 'success') {
             formMessage.classList.add('bg-green-100', 'text-green-800');
         } else {
             formMessage.classList.add('bg-red-100', 'text-red-800');
         }
-        
         formMessage.classList.remove('hidden');
-        
         setTimeout(function() {
             formMessage.classList.add('hidden');
         }, 5000);
@@ -118,34 +113,23 @@ function initScheduleFilters() {
             button.addEventListener('click', function() {
                 const week = this.getAttribute('data-week');
                 filterSchedule(week);
-                updateActiveButton(this);
+                updateActiveButton(this, filterButtons);
             });
         });
     }
 }
 
 function filterSchedule(week) {
-    const sections = document.querySelectorAll('.week-section');
-    
-    sections.forEach(function(section) {
-        const sectionWeek = section.getAttribute('data-week');
-        
-        if (sectionWeek === week) {
-            section.classList.remove('hidden');
-        } else {
-            section.classList.add('hidden');
-        }
+    document.querySelectorAll('.week-section').forEach(function(section) {
+        section.classList.toggle('hidden', section.getAttribute('data-week') !== week);
     });
 }
 
-function updateActiveButton(activeButton) {
-    // Remover clase active de todos los botones
+function updateActiveButton(activeButton, filterButtons) {
     filterButtons.forEach(function(button) {
         button.classList.remove('active', 'bg-primary', 'text-white');
         button.classList.add('bg-white', 'border-2', 'border-primary', 'text-primary');
     });
-    
-    // Agregar clase active al botón clickeado
     activeButton.classList.remove('bg-white', 'border-2', 'border-primary', 'text-primary');
     activeButton.classList.add('active', 'bg-primary', 'text-white');
 }
